@@ -3,8 +3,9 @@ import React from 'react';
 import TodoList from '../components/TodoList';
 import TodoForm from '../components/TodoForm';
 import {TodoConsumer} from '../contexts/TodoContext';
+import withAuth from '../hocs/withAuth'
 
-export default class TodoContainer extends React.Component {
+class TodoContainer extends React.Component {
   render() {
     return (
       <TodoConsumer>
@@ -28,3 +29,5 @@ export default class TodoContainer extends React.Component {
     );
   }
 }
+
+export default withAuth(TodoContainer);

@@ -12,7 +12,7 @@ class App extends Component {
       <Router>
         <UserProvider>
           <Route path="/login" component={LoginPage}/>
-          <Route path="/todo" component={TodoPageComponent}/>
+          <Route path="/todo" render={() => <TodoPage title="My Title"/>}/>
           <Route exact path="/" component={Home}/>          
         </UserProvider>
         </Router>
@@ -23,13 +23,6 @@ class App extends Component {
 const Home = () => 
   (localStorage.getItem('token')) ?
   <Redirect to="todo"/> : <Redirect to="login"/>
-
-const TodoPageComponent = () => (
-  (localStorage.getItem('token')) ?
-  <Route path="/todo" component={TodoPage}/> : <Redirect to="login"/>
-) //problem solved as asshole
-
-
 
 
 

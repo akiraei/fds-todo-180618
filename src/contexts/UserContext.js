@@ -1,6 +1,6 @@
 import React from 'react';
 
-import todoAPI from '../todoAPI';
+import boardAPI from '../boardAPI';
 
 const {Provider, Consumer} = React.createContext();
 
@@ -10,7 +10,7 @@ class UserProvider extends React.Component {
   login = async (username, password) => {
     try {
       // 로그인 요청
-      const res = await todoAPI.post('/users/login', {
+      const res = await boardAPI.post('/users/login', {
         username: username,
         password: password
       });

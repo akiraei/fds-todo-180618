@@ -1,25 +1,20 @@
-import React, {Component} from 'react'
-import ListUnit from './ListUnit'
+import React, { Component } from 'react';
+import ListUnit from './ListUnit';
 import { CellConsumer, CellProvider } from '../contexts/CellContext';
 
 export default class CellList extends Component {
-
   render() {
-
     return (
-      <CellConsumer> 
-        { ({cells}) => {
+      <CellConsumer>
+        {({ cells }) => {
           <ul>
-      {cells.map(cell => (
-        <ListUnit
-        key={cell.id} 
-        {...cell}
-        />
-      ))
-    }
-    </ul>
-        }} 
-    </CellConsumer>
-    )
+            {cells.map(cell => (
+              <div key={cell.id}>{cell.title}</div>
+              // <ListUnit key={cell.id} {...cell} />
+            ))}
+          </ul>;
+        }}
+      </CellConsumer>
+    );
   }
-} 
+}

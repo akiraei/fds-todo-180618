@@ -6,10 +6,9 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-import LoginForm from '../components/LoginForm'
+import LoginForm from '../components/LoginForm';
 
-storiesOf('LoginForm', module)
-  .add('empty', () => <LoginForm />);
+storiesOf('LoginForm', module).add('empty', () => <LoginForm />);
 
 storiesOf('Button', module)
   .add('with text', () => <button>Storybook</button>)

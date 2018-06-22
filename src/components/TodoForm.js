@@ -1,24 +1,24 @@
-import React from "react";
+import React from 'react';
 
 export default class TodoForm extends React.Component {
   state = {
-      newTodoBody: ''
-  }
+    newTodoBody: '',
+  };
   handleInputChange = e => {
-      this.setState({
-          newTodoBody: e.target.value
-      });
-  }
+    this.setState({
+      newTodoBody: e.target.value,
+    });
+  };
 
   handleButtonClick = e => {
-    this.props.onCreate(this.state.newTodoBody)
+    this.props.onCreate(this.state.newTodoBody);
     this.setState({
-        newTodoBody: ''
-    })
-  }
+      newTodoBody: '',
+    });
+  };
 
   render() {
-    const {newTodoBody} = this.state;
+    const { newTodoBody } = this.state;
     return (
       <label>
         새 할 일

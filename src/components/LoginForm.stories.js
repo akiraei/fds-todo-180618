@@ -6,5 +6,4 @@ import { linkTo } from '@storybook/addon-links';
 
 import LoginForm from './LoginForm';
 
-storiesOf('LoginForm', module)
-  .add('empty', () => <LoginForm />);
+storiesOf('LoginForm', module).add('empty', () => <LoginForm />);
